@@ -11,11 +11,55 @@ function dibujaTarjetas(arreglo) {
 	ctrlMostrado.innerHTML = imprime;
 }
 
-function ordenaPorHabitacion(arreglo) {
+function ordenaPorHabitacion(arr) {
 	//En esta función escribe la función que ordenará el arreglo por habitación
+	var valor_temporal;
+	for (var i = arr.length - 1; i >= 0; i--) {
+		var posicion_maximo = findMax(arr, i)
+		valor_temporal = arr[posicion_maximo] 
+		arr[posicion_maximo] = arr[i] 
+		arr[i] = valor_temporal 
+	}
+	dibujaTarjetas(arr);
 }
 
-function ordenaPorHuesped(arreglo) {
-	//Acá puedes hacer la otra que ordene por el nombre del huesped
+function findMax(arr, end) {
+	var max = 0;
+
+	for (var i = 0; i <= end; i++) {
+		if (parseInt(arr[i].numHabitacion) > parseInt(arr[max].numHabitacion)) {
+			max = i;
+		}
+	}
+
+	return max;
 }
+
+
+function ordenaPorHuesped(arr) {
+	//Acá puedes hacer la otra que ordene por el nombre del huesped
+
+	var valor_temporal;
+	for (var i = arr.length - 1; i >= 0; i--) {
+		var posicion_maximo = find_max(arr, i)
+		valor_temporal = arr[posicion_maximo] 
+		arr[posicion_maximo] = arr[i] 
+		arr[i] = valor_temporal 
+	}
+	dibujaTarjetas (arr);
+}
+
+function find_max(arr, end) {
+	var max = 0;
+
+	for (var i = 0; i <= end; i++) {
+		if (arr[i].nombreHuesped > arr[max].nombreHuesped) {
+			max = i;
+		}
+	}
+
+	return max;
+}
+
+
 
