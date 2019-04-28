@@ -6,5 +6,9 @@ var registro = [
 	{numHabitacion: "67", nombreHuesped: "Amy Pond"},
 	{numHabitacion: "45", nombreHuesped: "Miyamoto Musashi"},
 	{numHabitacion: "93", nombreHuesped: "Amelia Earhart"},
-	{numHabitacion: "47", nombreHuesped: "Katherin Janeway"}
+	{numHabitacion: "47", nombreHuesped: "Katherin Janeway"},
+	{numHabitacion: "207", nombreHuesped: "Adriana Guerrero"},
+	{numHabitacion: "445", nombreHuesped: "Miriam Solis"},
+	{numHabitacion: "103", nombreHuesped: "Arturo León"},
+	{numHabitacion: "104", nombreHuesped: "Sandra Guerrero"}
 ];

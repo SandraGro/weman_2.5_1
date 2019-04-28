@@ -12,41 +12,52 @@ function dibujaTarjetas(arreglo) {
 }
 
 function ordenaPorHabitacion(arr) {
-	//En esta función escribe la función que ordenará el arreglo por habitación
-	var valor_temporal;
-	for (var i = arr.length - 1; i >= 0; i--) {
-		var posicion_maximo = findMax(arr, i)
-		valor_temporal = arr[posicion_maximo] 
-		arr[posicion_maximo] = arr[i] 
-		arr[i] = valor_temporal 
-	}
-	dibujaTarjetas(arr);
+	let incio = performance.now();
+	dibujaTarjetas(qSort(arr))
+	let fin = performance.now();
+	console.log( "Tiempo de ejecución: ", fin-incio);
 }
 
-function findMax(arr, end) {
-	var max = 0;
-
-	for (var i = 0; i <= end; i++) {
-		if (parseInt(arr[i].numHabitacion) > parseInt(arr[max].numHabitacion)) {
-			max = i;
+function qSort(arr) {
+	if (arr.length <= 1) {
+		return arr;
+	} else {
+		var pivot = Math.round(Math.random() * (arr.length - 1));
+		//console.log("posición", pivot);
+		var pivot = arr[pivot];
+		//console.log("valor",pivot);
+		var max = [];
+		var min = [];
+		var p = [];
+		
+		for (var el in arr) {
+			var el = arr[el];
+			// console.log(el);
+			if (parseInt(pivot.numHabitacion) > parseInt(el.numHabitacion)) {
+				min.push(el);
+			} else if (parseInt(pivot.numHabitacion) < parseInt(el.numHabitacion)) {
+				max.push(el);
+			} else {
+				p.push(el);
+			}
 		}
 	}
-
-	return max;
+	return (qSort(min)).concat(p, qSort(max));
 }
-
 
 function ordenaPorHuesped(arr) {
 	//Acá puedes hacer la otra que ordene por el nombre del huesped
-
+	let inicio = performance.now();
 	var valor_temporal;
 	for (var i = arr.length - 1; i >= 0; i--) {
 		var posicion_maximo = find_max(arr, i)
-		valor_temporal = arr[posicion_maximo] 
-		arr[posicion_maximo] = arr[i] 
-		arr[i] = valor_temporal 
+		valor_temporal = arr[posicion_maximo]
+		arr[posicion_maximo] = arr[i]
+		arr[i] = valor_temporal
 	}
-	dibujaTarjetas (arr);
+	dibujaTarjetas(arr);
+	let fin = performance.now();
+	console.log("Tiempo de ejecución: ",fin-inicio)
 }
 
 function find_max(arr, end) {
@@ -60,6 +71,3 @@ function find_max(arr, end) {
 
 	return max;
 }
-
-
-
