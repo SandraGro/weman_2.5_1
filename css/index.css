@@ -42,24 +42,24 @@ tr{
     border-collapse: collapse;
 }
 
-  #registro td, #registro th {
+#registro td, #registro th {
     border: 1px solid #ddd;
     padding: 8px;
-  }
-  
-  #registro tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #registro tr:hover {background-color: #ddd;}
-  
-  #registro th {
+}
+
+#registro tr:nth-child(even){background-color: #f2f2f2;}
+
+#registro tr:hover {background-color: #ddd;}
+
+#registro th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
     background-color: #616060; 
     color: white;
-  }
+}
 
-  .ordenar{
+.ordenar{
     cursor: pointer;
 
-  }
+}
