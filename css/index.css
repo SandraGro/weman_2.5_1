@@ -1,3 +1,10 @@
+@media (max-width: 600px){
+    .title{ 
+      position:absolute;
+    }
+    
+}
+
 tr{
     padding: 5px;
 }
@@ -30,8 +37,8 @@ tr{
     font-weight: 300;
     font-size: 13px;
     padding-top: 5px;
-    width: 90%;
-    margin:20px;
+    width: 80%;
+    margin: auto;
     border-collapse: collapse;
 }
 
@@ -50,4 +57,9 @@ tr{
     text-align: center;
     background-color: #616060; 
     color: white;
+  }
+
+  .ordenar{
+    cursor: pointer;
+
   }

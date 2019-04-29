@@ -2,7 +2,7 @@
 let ctrlMostrado = document.getElementById('salida');
 
 function dibujaTarjetas(arreglo) {
-	let imprime = "<table id='registro'><tr><th>Habitación</th><th>Huesped</th></tr>";
+	let imprime = "<table id='registro'><tr><th>Habitación <i class='fas fa-sort ordenar' onclick='ordenaPorHabitacion(registro)'></i></th><th>Huesped <i class='fas fa-sort ordenar'onclick='ordenaPorHuesped(registro)'></i></th></tr>";
 	//La siguiente estructura de for es casi ya un arcaísmo. Sin embargo, los clásicos nunca mueren.
 	for (let i = 0; i < arreglo.length; i++) {
 		imprime += "<tr><td>" + arreglo[i].numHabitacion + "</td><td>" + arreglo[i].nombreHuesped + "</td></tr>";
